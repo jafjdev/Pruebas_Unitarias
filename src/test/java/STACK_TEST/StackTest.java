@@ -20,15 +20,14 @@ class StackTest {
   @Test
   void push() {
     s.push('z');
-    char[] c = s.getItems();
-    assertEquals('z', c[2]);
+    assertEquals('z', s.getItems()[s.getTop()]);
   }
 
   @Test
   void pop() {
     s.pop();
     char[] c = s.getItems();
-    assertEquals('b', c[1]);
+    assertEquals('a', s.getItems()[s.getTop()]);
   }
 
   @Test
@@ -42,5 +41,6 @@ class StackTest {
     s.pop();
     s.pop();
     assertTrue(s.empty());
+
   }
 }

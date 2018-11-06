@@ -31,4 +31,5 @@ public class Stack {
   public boolean empty() {
     return top == emptyStack;
   }
+
 }
